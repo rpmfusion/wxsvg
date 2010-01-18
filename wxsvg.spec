@@ -1,6 +1,6 @@
 Name:          wxsvg
-Version:       1.0
-Release:       8%{?dist}
+Version:       1.0.2_1
+Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -75,6 +75,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_includedir}/wxSVGXML/
 
 %changelog
+* Mon Jan 18 2010 Stewart Adam <s.adam at diffingo.com> - 1.0.2_1-1
+- Update to 1.0.2_1 release
+
 * Wed Oct 21 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 1.0-8
 - rebuild for new ffmpeg
 
