@@ -7,7 +7,6 @@ Group:         System Environment/Libraries
 License:       wxWidgets
 URL:           http://www.wxsvg.org/
 Source0:       http://downloads.sourceforge.net/wxsvg/wxsvg-%{version}.tar.bz2
-Patch0:        wxsvg-1.0-ffmpeg.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: libtool, gettext
 BuildRequires: expat-devel
