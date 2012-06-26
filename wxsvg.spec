@@ -8,7 +8,7 @@ License:       wxWidgets
 URL:           http://sourceforge.net/projects/wxsvg
 Source0:       http://downloads.sourceforge.net/wxsvg/wxsvg-%{version}.tar.bz2
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-#BuildRequires: libtool, gettext
+BuildRequires: libtool, gettext
 BuildRequires: expat-devel
 BuildRequires: ffmpeg-devel
 BuildRequires: freetype-devel
@@ -33,6 +33,8 @@ provides the files required to develop programs that use wxsvg.
 %setup -q
 
 %build
+mkdir -p m4
+autoreconf -vif
 %configure \
     --disable-dependency-tracking \
     --disable-static
