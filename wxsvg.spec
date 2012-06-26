@@ -5,7 +5,7 @@ Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
 License:       wxWidgets
-URL:           http://wxsvg.sourceforge.net
+URL:           http://sourceforge.net/projects/wxsvg
 Source0:       http://downloads.sourceforge.net/wxsvg/wxsvg-%{version}.tar.bz2
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildRequires: libtool, gettext
@@ -72,6 +72,7 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %changelog
 * Tue Jun 26 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.1.9-1
 - Update to 1.1.9
+- Use SF URL
 
 * Tue Jun 26 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.1.8-2
 - Rebuilt for FFmpeg
