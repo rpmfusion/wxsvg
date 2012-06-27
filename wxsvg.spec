@@ -34,7 +34,7 @@ provides the files required to develop programs that use wxsvg.
 
 %build
 mkdir -p m4
-autoreconf -vif
+sh autogen.sh
 %configure \
     --disable-dependency-tracking \
     --disable-static
