@@ -34,7 +34,9 @@ provides the files required to develop programs that use wxsvg.
 
 %build
 mkdir -p m4
-sh autogen.sh
+cp /usr/share/libtool/config/ltmain.sh .
+autoupdate
+autoreconf
 %configure \
     --disable-dependency-tracking \
     --disable-static
