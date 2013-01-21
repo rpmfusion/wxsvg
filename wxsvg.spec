@@ -1,6 +1,6 @@
 Name:          wxsvg
-Version:       1.1.9
-Release:       2%{?dist}
+Version:       1.1.12
+Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -33,10 +33,7 @@ provides the files required to develop programs that use wxsvg.
 %setup -q
 
 %build
-mkdir -p m4
-cp /usr/share/libtool/config/ltmain.sh .
-autoupdate
-autoreconf
+./autogen.sh
 %configure \
     --disable-dependency-tracking \
     --disable-static
@@ -47,14 +44,10 @@ autoreconf
 
 
 %install
-%{__rm} -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT INSTALL="%{__install} -p"
 
 # Get rid of those .la files
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
-
-%clean
-%{__rm} -rf $RPM_BUILD_ROOT
 
 %post -p /sbin/ldconfig
 
@@ -74,6 +67,11 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Mon Jan 21 2013 Sérgio Basto <sergio@serjux.com> - 1.1.12-1
+- Update to 1.1.12
+- re-use ./autogen.sh
+- minor clean ups 
+
 * Sat Nov 24 2012 Nicolas Chauvet <kwizart@gmail.com> - 1.1.9-2
 - Rebuilt for FFmpeg 1.0
 
