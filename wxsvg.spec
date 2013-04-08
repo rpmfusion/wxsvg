@@ -1,5 +1,5 @@
 Name:          wxsvg
-Version:       1.1.13
+Version:       1.1.14
 Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
@@ -8,7 +8,7 @@ License:       wxWidgets
 URL:           http://sourceforge.net/projects/wxsvg
 Source0:       http://downloads.sourceforge.net/wxsvg/wxsvg-%{version}.tar.bz2
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: libtool, gettext
+BuildRequires: libtool gettex perl-Carpt
 BuildRequires: expat-devel
 BuildRequires: ffmpeg-devel
 BuildRequires: freetype-devel
@@ -33,6 +33,7 @@ provides the files required to develop programs that use wxsvg.
 %setup -q
 
 %build
+chmod +x ./autogen.sh ./configure
 ./autogen.sh
 %configure \
     --disable-dependency-tracking \
@@ -67,6 +68,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Mon Apr 08 2013 Sérgio Basto <sergio@serjux.com> - 1.1.14-1
+- Update to 1.1.14
+
 * Wed Feb 20 2013 Sérgio Basto <sergio@serjux.com> - 1.1.13-1
 - Update to 1.1.13
 
