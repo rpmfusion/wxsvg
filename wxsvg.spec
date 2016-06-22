@@ -1,5 +1,5 @@
 Name:          wxsvg
-Version:       1.5.5
+Version:       1.5.8
 Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
@@ -69,6 +69,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Wed Jun 22 2016 Nicolas Chauvet <kwizart@gmail.com> - 1.5.8-1
+- Update to 1.5.8
+
 * Tue Oct 27 2015 Sérgio Basto <sergio@serjux.com> - 1.5.5-1
 - Update to 1.5.5.
 - Use autoreconf -i instead autogen.sh
