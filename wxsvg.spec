@@ -1,6 +1,6 @@
 Name:          wxsvg
 Version:       1.5.9
-Release:       1%{?dist}
+Release:       2%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -13,7 +13,7 @@ BuildRequires: ffmpeg-devel
 BuildRequires: freetype-devel
 BuildRequires: libart_lgpl-devel
 BuildRequires: pango-devel
-BuildRequires: wxGTK-devel
+BuildRequires: wxGTK3-devel
 
 %description
 wxSVG is C++ library to create, manipulate and render SVG files.
@@ -38,7 +38,7 @@ rm m4/libtool.m4 m4/lt~obsolete.m4 m4/ltoptions.m4 m4/ltsugar.m4 m4/ltversion.m4
 autoreconf -i
 %configure \
     --disable-dependency-tracking \
-    --disable-static
+    --disable-static --with-wx-config=/usr/bin/wx-config-3.0
 %{__sed} -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool
 %{__sed} -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 
@@ -68,6 +68,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Mon Aug 15 2016 Sérgio Basto <sergio@serjux.com> - 1.5.9-2
+- Upstream suggested to use wxGTK 3.x.
+
 * Tue Aug 09 2016 Sérgio Basto <sergio@serjux.com> - 1.5.9-1
 - Update to 1.5.9
 - Remove patch0, patch is already in source.
