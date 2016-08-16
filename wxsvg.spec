@@ -1,6 +1,6 @@
 Name:          wxsvg
 Version:       1.5.9
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -21,8 +21,6 @@ wxSVG is C++ library to create, manipulate and render SVG files.
 %package devel
 Summary: Development files for the wxSVG library
 Group: Development/Libraries
-Requires: %{name} = %{version}-%{release}
-Requires: wxGTK-devel
 
 %description devel
 wxSVG is C++ library to create, manipulate and render SVG files. This package
@@ -68,6 +66,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Tue Aug 16 2016 Sérgio Basto <sergio@serjux.com> - 1.5.9-3
+- Remove Requires old wxGTK-devel in wxsvg-devel, also don't need Requires wxsvg
+
 * Mon Aug 15 2016 Sérgio Basto <sergio@serjux.com> - 1.5.9-2
 - Upstream suggested to use wxGTK 3.x.
 
