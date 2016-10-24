@@ -15,6 +15,7 @@ BuildRequires: freetype-devel
 BuildRequires: libart_lgpl-devel
 BuildRequires: pango-devel
 BuildRequires: compat-wxGTK3-gtk2-devel
+BuildRequires: libexif-devel
 
 %description
 wxSVG is C++ library to create, manipulate and render SVG files.
