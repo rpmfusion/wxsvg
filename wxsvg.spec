@@ -1,5 +1,5 @@
 Name:          wxsvg
-Version:       1.5.10
+Version:       1.5.11
 Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
@@ -69,6 +69,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Wed Jan 18 2017 Sérgio Basto <sergio@serjux.com> - 1.5.11-1
+- Update wxsvg to 1.5.11
+
 * Mon Oct 24 2016 Sérgio Basto <sergio@serjux.com> - 1.5.10-1
 - Update to 1.5.10, added support of EXIF metadata.
 
