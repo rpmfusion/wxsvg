@@ -39,7 +39,10 @@ rm m4/libtool.m4 m4/lt~obsolete.m4 m4/ltoptions.m4 m4/ltsugar.m4 m4/ltversion.m4
 autoreconf -i
 %configure \
     --disable-dependency-tracking \
-    --disable-static --with-wx-config=/usr/bin/wx-config-3.0-gtk2
+    %if (0%{?fedora} && 0%{?fedora} < 28)
+    --with-wx-config=/usr/bin/wx-config-3.0-gtk2 \
+    %endif
+    --disable-static
 %{__sed} -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool
 %{__sed} -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 
