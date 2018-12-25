@@ -9,6 +9,7 @@ URL:           http://sourceforge.net/projects/wxsvg
 Source0:       http://downloads.sourceforge.net/wxsvg/wxsvg-%{version}.tar.bz2
 Patch1:        wxsvg-wxwin.m4.patch
 BuildRequires: autoconf automake libtool gettext
+BuildRequires: gcc-c++
 BuildRequires: expat-devel
 BuildRequires: ffmpeg-devel
 BuildRequires: freetype-devel
