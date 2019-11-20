@@ -1,5 +1,5 @@
 Name:          wxsvg
-Version:       1.5.20
+Version:       1.5.21
 Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
@@ -71,6 +71,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Wed Nov 20 2019 Martin Gansser <martinkg@fedoraproject.org> - 1.5.21-1
+- Update to 1.5.21
+
 * Mon Aug 26 2019 Sérgio Basto <sergio@serjux.com> - 1.5.20-1
 - Update wxsvg to 1.5.20
 
