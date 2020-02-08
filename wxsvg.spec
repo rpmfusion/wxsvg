@@ -1,6 +1,6 @@
 Name:          wxsvg
-Version:       1.5.21
-Release:       2%{?dist}
+Version:       1.5.22
+Release:       1%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -71,6 +71,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Sat Feb 08 2020 Martin Gansser <martinkg@fedoraproject.org> - 1.5.22-1
+- Update to 1.5.22
+
 * Wed Feb 05 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.5.21-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
