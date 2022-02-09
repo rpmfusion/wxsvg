@@ -1,6 +1,6 @@
 Name:          wxsvg
 Version:       1.5.23
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       C++ library to create, manipulate and render SVG files
 
 Group:         System Environment/Libraries
@@ -71,6 +71,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/pkgconfig/lib%{name}.pc
 
 %changelog
+* Wed Feb 09 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.5.23-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
 * Sat Dec 04 2021 Sérgio Basto <sergio@serjux.com> - 1.5.23-2
 - Rebuild with wxGTK-3.1.x
 - Some cleanups
